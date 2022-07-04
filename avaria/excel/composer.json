@@ -1,0 +1,11 @@
+{
+    "name":"vicunha/excel",
+    "autoload": {
+        "psr-4": {
+            "App\\":"app/"
+        }
+    },
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.23"
+    }
+}

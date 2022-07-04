@@ -1,0 +1,110 @@
+        .cimainicio {
+            background: rgb(255,255,255,0);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .binicioazul{
+            text-decoration: none;
+            color: white;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: blue;
+            font-size:large;
+            text-align: center;
+        }
+        .binicioazul:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .bg-inicio {
+            color:white;
+            border: 2px solid black;
+            padding: 40px;
+            border-radius: 15px;
+            background-color: rgb( 0, 0, 0, 0.6);
+        }
+        .bg-secundario {
+            color:white;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: rgb( 0, 0, 0, 0.6);
+        }
+        .login {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .bblue {
+            text-decoration: none;
+            color: white;
+            border: 2px solid black;
+            border-radius: 7px;
+            padding: 3px;
+            background-color: blue;
+            font-size: x-large;
+        }
+
+        .bblue:hover {
+            background-color: black;
+            color: white;
+        }
+        .bgreen {
+            text-decoration: none;
+            color: white;
+            border: 2px solid black;
+            border-radius: 7px;
+            padding: 3px;
+            background-color: green;
+            font-size: x-large;
+        }
+
+        .bgreen:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .bred {
+            text-decoration: none;
+            color: white;
+            border: 2px solid black;
+            border-radius: 7px;
+            padding: 3px;
+            background-color: red;
+            font-size: x-large;
+        }
+        .bred:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .bn {
+            text-decoration: none;
+            color: white;
+            border: 2px solid black;
+            border-radius: 7px;
+            padding: 3px;
+            background-color: red;
+        }
+        .bn:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .alert-info {
+            padding-bottom: 7px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 10px;
+        }
+        .text-white {
+            color: white;
+        }
+        
+        
+        .disclaimer{
+            display: none;
+        }
