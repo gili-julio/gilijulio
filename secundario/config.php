@@ -9,10 +9,10 @@ $db = substr($url["path"], 1);
 
 $conexao = new mysqli($server, $username, $password, $db);
 
-    if($conexao->connect_errno){
+    /*if($conexao->connect_errno){
     echo "Erro";
     } else {
     echo "Tudo certo";
-    }
+    }*/
 
 ?>
