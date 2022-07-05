@@ -70,7 +70,7 @@ if($_SESSION['usuario'] == "vicunha"){
         ?>
     <div class="bg-secundario text-center col-12 col-lg-4 offset-lg-4">
         <h1 class="d-inline-block">Código do produto: </h1>
-        <form action="/dadosprodutocodigodebarras.php" method="POST">
+        <form action="/secundario/dadosprodutocodigodebarras.php" method="POST">
             <div class="inputBox">
                 <br>
                 <input autocomplete="off" type="number" class="form-control text-center" style="size:x-large;" name="codigobarras" placeholder="Código de barras">
