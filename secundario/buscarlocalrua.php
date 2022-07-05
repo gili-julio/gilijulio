@@ -1,7 +1,7 @@
 <?php
     session_start();
     //INCLUI O CÓDIGO DE CONEXÃO COM O BD
-    include_once('config.php');
+    include_once('/config.php');
     
     $sql = "SELECT distinct(rua) as ruas FROM produtos";
     $result = $conexao->query($sql);
@@ -54,7 +54,7 @@ unset($_SESSION['apartamento']);
             </a>
         </div>
         <div class='d-inline-block col-12 col-lg-3 offset-lg-9 text-white text-end' >
-            <a href="indexbuscarlocal.php" class="bred d-inline-block">
+            <a href="/indexbuscarlocal.php" class="bred d-inline-block">
                 Voltar
             </a>
         </div>
@@ -68,7 +68,7 @@ unset($_SESSION['apartamento']);
         }
         ?>
         <div class="bg-inicio text-center col-12 col-lg-4 offset-lg-4">
-            <form action="buscarlocalruaapartamento.php" method="POST">
+            <form action="/buscarlocalruaapartamento.php" method="POST">
                 <div class="inputBox">
                     <label><h2>Rua</h2></label>
                     <select class="form-select" id="Select" name="rua" >
