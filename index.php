@@ -32,7 +32,7 @@ if($_SESSION['usuario'] == "vicunha"){
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="/css.css" rel="stylesheet">
+    <link href="css.css" rel="stylesheet">
     <link href="/carregamento/carregar.css" rel="stylesheet">
     
     <link rel="shortcut icon" type="imagex/png" href="/fotos/atacadaologo.png">
@@ -58,7 +58,7 @@ if($_SESSION['usuario'] == "vicunha"){
     
     <div class="container">
         <div class="container d-inline-block">
-            <a class="d-inline-block" href="/index.php">
+            <a class="d-inline-block" href="index.php">
                 <img src="/fotos/atacadaologo.png" alt="logo do atacadão" width="250" height="120" class="">
             </a>
         </div>
@@ -135,7 +135,7 @@ if($_SESSION['usuario'] == "vicunha"){
         </a>
         <br>
         <br>
-        <a href="/executar.php" class="binicioazul d-inline-block col-12">
+        <a href="executar.php" class="binicioazul d-inline-block col-12">
             Executar
         </a>
     </div>
