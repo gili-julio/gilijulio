@@ -11,7 +11,7 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 //INSTÂNCIA PRINCIPAL DA PLANILHA
     $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
-    $spreadsheet = $reader->load("/Modelo.xlsx");
+    $spreadsheet = $reader->load("Modelo.xlsx");
 
 //OBTÉM A ABA ATIVA DENTRO DO ARQUIVO DO EXCEL
     $sheet = $spreadsheet->getActiveSheet();
@@ -75,10 +75,10 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 //ESCREVE O ARQUIVO NO DISCO COM O FORMATO XLSX
     $writer = new Xlsx($spreadsheet);
-    $writer->save('/'.$nome.'.xlsx');
+    $writer->save($nome.'.xlsx');
 
 header("Content-disposition: attachment; filename=$nome.xlsx");
 header("Content-type: application/xlsx");
-readfile('/'.$nome.'.xlsx');
-unlink('/'.$nome.'.xlsx');
+readfile($nome.'.xlsx');
+unlink($nome.'.xlsx');
 ?>
