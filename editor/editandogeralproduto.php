@@ -2,7 +2,7 @@
 session_start();
 //VER SE HÁ LOGIN ATIVO
 if (empty($_SESSION['usuario']) && empty($_SESSION['senha'])) {
-    header('Location: /login.php');
+    header('Location: login.php');
 }
 
 //VERIFICA SE HÁ UM ID PARA A PAGINA
@@ -18,7 +18,7 @@ if (!empty($_SESSION['id'])) {
 
     if (mysqli_num_rows($result) == 0) {
         $_SESSION['url'] = "error";
-        header('Location: /editorgeral.php');
+        header('Location: editorgeral.php');
     } else {
         $_SESSION['url'] = "sucesso";
     }
@@ -48,7 +48,7 @@ if (!empty($_SESSION['id'])) {
             header('Location: ../loginfeito/iniciologado.php');
         } */
 } else {
-    header('Location: /editorgeral.php');
+    header('Location: editorgeral.php');
 }
 
 
@@ -172,7 +172,7 @@ if (!empty($_SESSION['id'])) {
             <div class="d-inline-block col-9">
                 <br><br>
                 <br>
-                <a href="/editargeralproduto.php" class="blogin2 d-inline-block">
+                <a href="editargeralproduto.php" class="blogin2 d-inline-block">
                     Cancelar
                 </a>
             </div>
@@ -181,7 +181,7 @@ if (!empty($_SESSION['id'])) {
     </div>
     
     <div class="bg text-center col-10 offset-1">
-        <form action="/verificareditargeralproduto.php" method="POST" enctype="multipart/form-data">
+        <form action="verificareditargeralproduto.php" method="POST" enctype="multipart/form-data">
             <div class='d-inline-block col-4 homi'>
             
             <label for=""><strong>Imagem do Produto</strong></label>
