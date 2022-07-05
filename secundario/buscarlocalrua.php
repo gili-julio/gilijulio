@@ -7,7 +7,7 @@
     $result = $conexao->query($sql);
     if (mysqli_num_rows($result) == 0) {
         $_SESSION['erro'] = "error";
-        header('Location: indexbuscarlocal.php');
+        header('Location: /indexbuscarlocal.php');
     }
 
 $erro = $_SESSION['erro'];
