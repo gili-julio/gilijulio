@@ -5,7 +5,7 @@ include_once('../secundario/config.php');
 
 //VER SE HÁ LOGIN ATIVO
 if (empty($_SESSION['usuario']) && empty($_SESSION['senha'])) {
-    header('Location: login.php');
+    header('Location: /editor/login.php');
 }
 //VERIFICAR SE HÁ UMA ID DE SESSÃO
 if (empty($_SESSION['id'])) {
@@ -19,7 +19,7 @@ $result = $conexao->query($sql);
 
 if (mysqli_num_rows($result) == 0) {
     $_SESSION['url'] = "error";
-    header('Location: editorgeral.php');
+    header('Location: /editor/editorgeral.php');
 } else {
     $_SESSION['url'] = "sucesso";
 }
@@ -179,7 +179,7 @@ $_SESSION['id'] = $produto_data['codigo_barras'];
             <div class="d-inline-block col-xl-9 col-md-9">
                 <br><br>
                 <br>
-                <a href="editorfotos.php" class=" blogin2 d-inline-block">
+                <a href="/editor/editorfotos.php" class=" blogin2 d-inline-block">
                     Voltar
                 </a>
             </div>
@@ -199,11 +199,11 @@ $_SESSION['id'] = $produto_data['codigo_barras'];
             <br>
             <?php
                 if($produto_data['nome_foto'] == null){
-                    echo "<a class='blogin3 d-inline-block' href='editandofotosproduto.php?id=$barras'>
+                    echo "<a class='blogin3 d-inline-block' href='/editor/editandofotosproduto.php?id=$barras'>
                         Adicionar Foto
                     </a>";
                 } else {
-                    echo "<a class='blogin2 d-inline-block' href='excluirfoto.php?id=$barras'>
+                    echo "<a class='blogin2 d-inline-block' href='/editor/excluirfoto.php?id=$barras'>
                         Excluir Foto
                     </a>";
                 }
