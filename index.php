@@ -133,6 +133,11 @@ if($_SESSION['usuario'] == "vicunha"){
         <a href="/avaria/fornecedor/index.php" class="binicioazul d-inline-block col-12">
             Teste
         </a>
+        <br>
+        <br>
+        <a href="/executar.php" class="binicioazul d-inline-block col-12">
+            Executar
+        </a>
     </div>
     
     
