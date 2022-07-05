@@ -2,7 +2,7 @@
 session_start();
 //VER SE HÁ LOGIN ATIVO
 if (empty($_SESSION['usuario']) && empty($_SESSION['senha'])) {
-    header('Location: login.php');
+    header('Location: /editor/login.php');
 }
 
 //VERIFICA SE HÁ UM ID PARA A PAGINA
@@ -195,7 +195,7 @@ if (!empty($_SESSION['id'])) {
     </div>
 
     <div class="bg text-center col-10 offset-1">
-        <form action="verificareditarfotosproduto.php" method="POST" enctype="multipart/form-data">
+        <form action="/editor/verificareditarfotosproduto.php" method="POST" enctype="multipart/form-data">
             <div class='d-inline-block col-lg-4 homi'>
 
                 <label for=""><strong>Imagem do Produto</strong></label>
