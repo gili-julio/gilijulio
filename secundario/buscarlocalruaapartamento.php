@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('config.php');
+include_once('/secundario/config.php');
 //VERIFICA SE ENVIARAM O FORMULARIO
 if (isset($_POST['submit']) && !empty($_POST['rua'])) {
     
@@ -11,7 +11,7 @@ if (isset($_POST['submit']) && !empty($_POST['rua'])) {
     if(isset($_SESSION['rua'])){
     $rua = $_SESSION['rua'];
     } else {
-    header('Location: buscarlocalrua.php');
+    header('Location: /secundario/buscarlocalrua.php');
         
     }
 }
@@ -20,7 +20,7 @@ if (isset($_POST['submit']) && !empty($_POST['rua'])) {
     $result = $conexao->query($sql);
     if (mysqli_num_rows($result) == 0) {
         $_SESSION['erro'] = "error";
-        header('Location: buscarlocalrua.php');
+        header('Location: /secundario/buscarlocalrua.php');
     }
 
 //EVITAR ERROS
@@ -70,7 +70,7 @@ unset($_SESSION['apartamento']);
             </a>
         </div>
         <div class='d-inline-block col-12 col-lg-3 offset-lg-9 text-white text-end' >
-            <a href="buscarlocalrua.php" class="bred d-inline-block">
+            <a href="/secundario/buscarlocalrua.php" class="bred d-inline-block">
                 Voltar
             </a>
         </div>
@@ -84,7 +84,7 @@ unset($_SESSION['apartamento']);
         }
         ?>
         <div class="bg-inicio text-center col-12 col-lg-4 offset-lg-4">
-            <form action="dadosprodutolocalruaapartamento.php" method="POST">
+            <form action="/secundario/dadosprodutolocalruaapartamento.php" method="POST">
                 <div class="inputBox">
                     <label><h2>Apartamento</h2></label>
                     <select class="form-select" id="Select" name="apartamento" >
