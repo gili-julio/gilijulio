@@ -3,7 +3,7 @@ session_start();
 //VERIFICA SE ENVIARAM O FORMULARIO COM ALGUM CODIGO DE BARRAS
 if (isset($_POST['submit']) && !empty(($_POST['descricao'])) or ($_SESSION['descricao'])) {
     //INCLUI O CÓDIGO DE CONEXÃO COM O BD
-    include_once('/config.php');
+    include_once('/secundario/config.php');
     
     if(empty($_SESSION['descricao'])){
         $_SESSION['descricao'] = str_replace( ' ' , '%' , $_POST['descricao'] );
@@ -15,7 +15,7 @@ if (isset($_POST['submit']) && !empty(($_POST['descricao'])) or ($_SESSION['desc
 
     if (mysqli_num_rows($result) == 0) {
         $_SESSION['erro'] = "error";
-        header('Location: /buscardescricao.php');
+        header('Location: /secundario/buscardescricao.php');
     } else {
     }
     
@@ -32,7 +32,7 @@ if (isset($_POST['submit']) && !empty(($_POST['descricao'])) or ($_SESSION['desc
             header('Location: ../loginfeito/iniciologado.php');
         } */
 } else {
-    header('Location: /buscardescricao.php');
+    header('Location: /secundario/buscardescricao.php');
 }
 
 
@@ -157,7 +157,7 @@ if (isset($_POST['submit']) && !empty(($_POST['descricao'])) or ($_SESSION['desc
                 </a>
             </div>
             <div class="d-inline-block container text-white text-end">
-                <a href="/buscardescricao.php" class="blogin2 d-inline-block">
+                <a href="/secundario/buscardescricao.php" class="blogin2 d-inline-block">
                     Voltar
                 </a>
             </div>
@@ -193,7 +193,7 @@ if (isset($_POST['submit']) && !empty(($_POST['descricao'])) or ($_SESSION['desc
                                 echo "<td colspan='' class='text-start borda'>" . $tabela['codigo_barras'] . "</td>";
                                 echo "<td colspan='' class='text-start borda'>" . $tabela['descricao'] . "</td>";
                                 echo "<td colspan='' class='text-center borda'>" . "<img src='../fotos/produtos/$foto' class='' width='50' height='width'>" . "</td>";
-                                echo "<td colspan='' class='text-center borda'>" . "<a class='blogin' href='/dadosprodutocodigodebarras.php?id=$tabela[codigo_barras]'>
+                                echo "<td colspan='' class='text-center borda'>" . "<a class='blogin' href='/secundario/dadosprodutocodigodebarras.php?id=$tabela[codigo_barras]'>
                                 <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-eye-fill' viewBox='0 0 16 16'>
                                   <path d='M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z'/>
                                   <path d='M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z'/>
