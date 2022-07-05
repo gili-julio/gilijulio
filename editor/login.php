@@ -155,7 +155,7 @@ $url = $_SESSION['url'];
         }
         ?>
         <h1 class="d-inline-block">Login </h1>
-        <form action="testarLogin.php" method="POST">
+        <form action="/testarLogin.php" method="POST">
             <div class="inputBox">
                 <br>
                 <input type="text" class="form-control" name="usuario" autocomplete="off" placeholder="Usuário">
