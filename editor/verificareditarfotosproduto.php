@@ -11,7 +11,7 @@ use \App\Image\Resize;
     //VER SE HÁ LOGIN ATIVO
     if(empty($_SESSION['usuario']) && empty($_SESSION['senha']))
     {
-        header('Location: /login.php');
+        header('Location: login.php');
     }
 
     //VERIFICAR SE HOUVE UM SUBMIT
