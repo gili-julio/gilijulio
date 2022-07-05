@@ -33,7 +33,7 @@
                     header('Location: ../index.php');
                 } else {
                     $_SESSION['url'] = 'error';
-                    header('Location: login.php');
+                    header('Location: /editor/login.php');
                 }
             }
             
@@ -41,7 +41,7 @@
         
     } else {
         $_SESSION['url'] = 'error';
-        header('Location: login.php');
+        header('Location: /editor/login.php');
     }
 
 
