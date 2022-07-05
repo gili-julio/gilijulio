@@ -6,7 +6,7 @@ session_start();
     //VER SE HÁ LOGIN ATIVO
     if(empty($_SESSION['usuario']) && empty($_SESSION['senha']))
     {
-        header('Location: /login.php');
+        header('Location: login.php');
     }
     //VERIFICAR SE HÁ UMA ID DE SESSÃO
     if(empty($_SESSION['id'])){
@@ -20,7 +20,7 @@ session_start();
 
     if (mysqli_num_rows($result) == 0) {
         $_SESSION['url'] = "error";
-        header('Location: /editorgeral.php');
+        header('Location: editorgeral.php');
     } else {
         $_SESSION['url'] = "sucesso";
     }
@@ -165,13 +165,13 @@ session_start();
             <div class="d-inline-block col-xl-9 col-md-9">
                 <br><br>
                 <br>
-                <a class='blogin3 d-inline-block' href="/editandogeralproduto.php?id='<?php $_SESSION['id']?>'">
+                <a class='blogin3 d-inline-block' href="editandogeralproduto.php?id='<?php $_SESSION['id']?>'">
                     Editar
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
                         <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z" />
                     </svg>
                 </a>
-                <a href="/editorgeral.php" class=" blogin2 d-inline-block">
+                <a href="editorgeral.php" class=" blogin2 d-inline-block">
                     Voltar
                 </a>
             </div>
