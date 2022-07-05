@@ -52,7 +52,7 @@ include_once('../secundario/config.php');
         }
     
     }
-        header('Location: avariaPadaria.php');
+        header('Location: /avariaPadaria.php');
 
 
 
