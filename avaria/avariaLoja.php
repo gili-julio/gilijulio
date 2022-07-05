@@ -54,7 +54,7 @@ if(($_SESSION['usuario'] == 'avaria') && ($_SESSION['senha'] == 'avaria')){
             if($valormotivo == "999"){
                 $_SESSION['erro'] = "error";
                 unset($_POST);
-                header('Location: avariaLoja.php');
+                header('Location: /avariaLoja.php');
             } else {
                 
                 //MUDA O MOTIVO DE ACORDO COM O CASO
@@ -102,11 +102,11 @@ if(($_SESSION['usuario'] == 'avaria') && ($_SESSION['senha'] == 'avaria')){
                             $_SESSION['erro'] = "sucesso";
                             unset($_POST);
                         }
-                        header('Location: avariaLoja.php');
+                        header('Location: /avariaLoja.php');
                     } else {
                         $_SESSION['erro'] = "existe";
                         unset($_POST);
-                        header('Location: avariaLoja.php');
+                        header('Location: /avariaLoja.php');
                     }
                 
             }
@@ -114,7 +114,7 @@ if(($_SESSION['usuario'] == 'avaria') && ($_SESSION['senha'] == 'avaria')){
         } else {
             $_SESSION['erro'] = "error";
             unset($_POST);
-            header('Location: avariaLoja.php');
+            header('Location: /avariaLoja.php');
         }
         $erro = $_SESSION['erro'];
     } else {
@@ -202,7 +202,7 @@ if(($_SESSION['usuario'] == 'avaria') && ($_SESSION['senha'] == 'avaria')){
         <table class="table text-start">
                     <tbody class="">
                         <tr class="borda">
-                            <form action="avariaLoja.php" method="POST">
+                            <form action="/avariaLoja.php" method="POST">
                                 <?php
                                     if($editar == 'nao'){
                                         echo "<th colspan='2'>
@@ -366,12 +366,12 @@ if(($_SESSION['usuario'] == 'avaria') && ($_SESSION['senha'] == 'avaria')){
                                         echo "<th class='text-center'>".$tabelaavaria['quantidade']."</th>";
                                         echo "<th class='text-center'>".$tabelaavaria['motivo']."</th>";
                                         echo "<th class='text-center'>
-                                        <a class='bblue d-inline-block' href='excluirLoja.php?editar=$barras'>
+                                        <a class='bblue d-inline-block' href='/excluirLoja.php?editar=$barras'>
                                         <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil-fill' viewBox='0 0 16 16'>
                                           <path d='M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z'/>
                                         </svg>
                                         </a>
-                                        <a class='bred d-inline-block' href='excluirLoja.php?id=$barras'>
+                                        <a class='bred d-inline-block' href='/excluirLoja.php?id=$barras'>
                                         <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash-fill' viewBox='0 0 16 16'>
                                           <path d='M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z'/>
                                         </svg>
@@ -389,7 +389,7 @@ if(($_SESSION['usuario'] == 'avaria') && ($_SESSION['senha'] == 'avaria')){
     <?php
         if(mysqli_num_rows($resultavaria) != 0){
             echo "<div class='text-center container'>
-                <a href='excel/gerar.php' class='bgreen d-inline-block'>Gerar Arquivo Excel</a>
+                <a href='/excel/gerar.php' class='bgreen d-inline-block'>Gerar Arquivo Excel</a>
             </div>";
         }
     ?>
