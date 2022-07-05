@@ -1,6 +1,6 @@
 <?php 
 
-include_once('/secundario/config.php');
+include_once('secundario/config.php');
 
 $sql = "CREATE TABLE produtos (
   codigo_barras TEXT NOT NULL,
