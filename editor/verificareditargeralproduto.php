@@ -6,7 +6,7 @@ include_once('../secundario/config.php');
     //VER SE HÁ LOGIN ATIVO
     if(empty($_SESSION['usuario']) && empty($_SESSION['senha']))
     {
-        header('Location: /login.php');
+        header('Location: login.php');
     }
 
     //VERIFICAR SE HOUVE UM SUBMIT
@@ -81,9 +81,9 @@ include_once('../secundario/config.php');
         }
 
         $_SESSION['id'] = $codbarras;
-        header('Location: /editargeralproduto.php');
+        header('Location: editargeralproduto.php');
     } else {
-        header('Location: /editargeralproduto.php');
+        header('Location: editargeralproduto.php');
     }
 
 
