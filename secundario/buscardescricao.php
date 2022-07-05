@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('config.php');
+include_once('/config.php');
 
 if(!isset($_SESSION['erro'])){
     $_SESSION['erro'] = 'nenhum';
@@ -63,7 +63,7 @@ unset($_SESSION['descricao']);
                 $_SESSION['erro'] = 'corrigido';
             }
         ?>
-            <form action="dadosprodutodescricao.php" method="POST">
+            <form action="/dadosprodutodescricao.php" method="POST">
                 <div class="inputBox">
                     <label><h2>Nome</h2></label>
                     <input type="text" autocomplete="off" class="form-control text-center" id="exampleFormControlInput1" name="descricao" placeholder="Nome do Produto">
