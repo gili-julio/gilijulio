@@ -67,7 +67,7 @@ include_once('../secundario/config.php');
         }
     
     }
-        header('Location: avariaLoja.php');
+        header('Location: /avariaLoja.php');
 
 
 
