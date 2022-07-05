@@ -77,10 +77,10 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 //ESCREVE O ARQUIVO NO DISCO COM O FORMATO XLSX
     $writer = new Xlsx($spreadsheet);
-    $writer->save('/'.$nome.'.xlsx');
+    $writer->save($nome.'.xlsx');
 
 header("Content-disposition: attachment; filename=$nome.xlsx");
 header("Content-type: application/xlsx");
-readfile('/'.$nome.'.xlsx');
-unlink('/'.$nome.'.xlsx');
+readfile($nome.'.xlsx');
+unlink($nome.'.xlsx');
 ?>
