@@ -2,7 +2,7 @@
 
 include_once('secundario/config.php');
 
-$sql = "CREATE TABLE produtos (
+$sql = "CREATE TABLE heroku_0975b1a2f8429b3.produtos (
   codigo_barras TEXT NOT NULL,
   cod_produto TEXT NULL,
   descricao TEXT NULL,
