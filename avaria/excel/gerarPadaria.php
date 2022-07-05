@@ -11,7 +11,7 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 //INSTÂNCIA PRINCIPAL DA PLANILHA
     $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
-    $spreadsheet = $reader->load("/Modelo.xlsx");
+    $spreadsheet = $reader->load("Modelo.xlsx");
 
 //OBTÉM A ABA ATIVA DENTRO DO ARQUIVO DO EXCEL
     $sheet = $spreadsheet->getActiveSheet();
