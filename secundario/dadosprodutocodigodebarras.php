@@ -1,7 +1,7 @@
 <?php
 session_start();
     //INCLUI O CÓDIGO DE CONEXÃO COM O BD
-    include_once('/config.php');
+    include_once('/secundario/config.php');
     
     //PEGA O ID DO PRODUTO SE VINHER SEM SER DA BUSCA PELO CODIGO DE BARRAS
     if(!empty($_GET['id'])){
@@ -22,7 +22,7 @@ session_start();
 
     if (mysqli_num_rows($result) == 0) {
         $_SESSION['erro'] = "error";
-        header('Location: /buscarcodigodebarras.php');
+        header('Location: /secundario/buscarcodigodebarras.php');
     }
 
     /* Transformar o result em uma tabela */
@@ -116,12 +116,12 @@ if($_SESSION['usuario'] == "vicunha"){
         <div class="d-inline-block col-12 col-lg-3 offset-lg-9 text-end">
             <a href="
             <?php if(!empty($_SESSION['apartamento'])){
-                        echo "/dadosprodutolocalruaapartamento.php";
+                        echo "/secundario/dadosprodutolocalruaapartamento.php";
                     } else {
                         if(!empty($_SESSION['descricao'])){
-                            echo "/dadosprodutodescricao.php";
+                            echo "/secundario/dadosprodutodescricao.php";
                         } else {
-                            echo "/buscarcodigodebarras.php";
+                            echo "/secundario/buscarcodigodebarras.php";
                         }
                     } ?>
                     " class="bred d-inline-block">
