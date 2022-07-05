@@ -11,7 +11,7 @@ use \App\Image\Girar;
     //VER SE HÁ LOGIN ATIVO
     if(empty($_SESSION['usuario']) && empty($_SESSION['senha']))
     {
-        header('Location: login.php');
+        header('Location: /login.php');
     } else {
 
             $barras = $_SESSION['id'];
