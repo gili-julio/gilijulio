@@ -5,10 +5,6 @@
     
     $sql = "SELECT distinct(rua) as ruas FROM produtos";
     $result = $conexao->query($sql);
-    if (mysqli_num_rows($result) == 0) {
-        $_SESSION['erro'] = "error";
-        header('Location: indexbuscarlocal.php');
-    }
 
 $erro = $_SESSION['erro'];
 unset($_SESSION['rua']);
