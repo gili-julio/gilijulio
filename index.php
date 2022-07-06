@@ -35,7 +35,7 @@ if($_SESSION['usuario'] == "vicunha"){
     <link href="css.css" rel="stylesheet">
     <link href="/carregamento/carregar.css" rel="stylesheet">
     
-    <link rel="shortcut icon" type="imagex/png" href="/fotos/atacadaologo.png">
+    <link rel="shortcut icon" type="imagex/png" href="https://vicunha2.herokuapp.com/fotos/atacadaologo.png">
 
     <title>Atacadão Vicunha</title>
 </head>
